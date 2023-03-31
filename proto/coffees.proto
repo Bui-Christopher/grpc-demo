@@ -1,0 +1,16 @@
+syntax = "proto3";
+package coffees;
+
+service Coffee {
+    rpc CreateCoffee (CreateCoffeeRequest) returns (CreateCoffeeResponse);
+}
+
+message CreateCoffeeRequest {
+    string person_name = 1;
+    string coffee_type = 2;
+}
+
+message CreateCoffeeResponse {
+   bool successful = 1; 
+   string message = 2;
+}
